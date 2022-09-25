@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+  max-width: 1224px !important;
+  width: calc(100% - 40px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin scale-left {
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.nav{
+  &-link{
+    @apply inline-block relative after:absolute after:block after:w-full after:h-1 after:bg-secondary after:rounded-md after:top-full after:mt-2;
+    &::after{
+      @include scale-left;
+    }
+    &.active{
+      @apply text-secondary;
+      &::after{
+        transform: scale(1);
+      }
+    }
+    &:not(.active):hover{
+      &::after{
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-btn{
+    display: inline-block;
+    @apply py-3 px-4 rounded inline-flex items-center ;
+    span{
+      transform: translateX(.6rem);
+      display: inline-block;
+      transform-origin: left;
+      transition: transform .3s ease-in-out;
+    }
+    i.devis{
+      @include scale-left;
+    }
+    &:hover{
+      span{
+        transform: translateX(0);
+      }
+      i.devis{
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.banner{
+  // @apply bg-gradient-to-l from-primary to-secondary;
+  .item::after{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.242));
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    clip-path: polygon(100% 0, 100% 87%, 59% 99%, 0 90%, 0 0);
+  }
+  clip-path: polygon(100% 0, 100% 87%, 59% 99%, 0 90%, 0 0);
+  img{
+    z-index: 1 !important;
+  }
+  button.absolute{
+    transition: opacity .3s ease-in-out;
+    opacity: 0;
+    z-index: 2000;
+  }
+
+  &:hover{
+    button.absolute{
+      opacity: 1;
+    }
+  }
+
+  .content{
+    position: relative;
+    z-index: 50;
+    opacity: 1;
+    color: #fff !important;
+  }
+}
+
+footer{
+  clip-path: polygon(28% 0, 100% 8%, 100% 100%, 0 100%, 0 10%);
+}
+
+
+div.devis{
+  background-image:linear-gradient(to right, rgba(0, 0, 0, 0.518), rgba(0, 0, 0, 0.578)), url('../../public/img/piscine-coque-arrondie2.jpg');
+  background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.hero{
+  background-image:linear-gradient(to right, rgba(0, 0, 0, 0.518), rgba(0, 0, 0, 0.578)), url('../../public/img/piscine-coque-arrondie2.jpg');
+  background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
