@@ -30,7 +30,21 @@
       </div>
       <div class="ml-4 xl:text-lg">
         <a href="{{ route('devis') }}" class=" nav-btn bg-opacity-80 bg-secondary text-sm text-white font-semibold"><span>Demander un devis</span> <i class="fa-solid ml-2 fa-arrow-right-long devis"></i></a>
-        <a href="#" class="nav-btn border-2 font-semibold text-sm "><i class="fa-solid fa-user mr-4"></i> Se connecter</a>
+        
+        @auth
+        <form method="POST" class="inline-block" action="{{ route('logout') }}">
+            @csrf
+
+            <x-dropdown-link :href="route('logout')" class="nav-btn border-2 font-semibold text-sm "
+                    onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                {{ __('Se déconnecter') }}
+            </x-dropdown-link>
+        </form>
+        @else
+          <a href="{{ route('login') }}" class="nav-btn border-2 font-semibold text-sm "><i class="fa-solid fa-user mr-4"></i> Se connecter</a>
+        @endauth
+        
       </div>
     </nav>
   </div>
