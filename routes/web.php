@@ -33,4 +33,6 @@ Route::middleware(['auth','role:ADMIN'])->group(function (){
     Route::get('/projects/create',[ProjetController::class,'create'])->name('project.create');
     Route::post('/projects',[ProjetController::class,'store'])->name('project.store');
     Route::get('/projects/{projet}',[ProjetController::class,'show'])->name('project.show');
+    Route::post('/projects/{projet}',[ProjetController::class,'update'])->name('projet.update');
+    Route::delete('/projects/{projet}',[ProjetController::class,'destroy'])->name('project.destroy');
 });

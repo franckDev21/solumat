@@ -14,7 +14,12 @@ class ProjetController extends Controller
      */
     public function index()
     {
-        //
+        $projects = Projet::orderBy('updated_at', 'DESC')
+            ->orderBy('created_at', 'DESC')
+            ->filter(request(['search']))
+            ->paginate(12);
+
+        return view('admin.project.index',compact('projects'));
     }
 
     /**
@@ -24,7 +29,7 @@ class ProjetController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.project.create');
     }
 
     /**
@@ -35,7 +40,30 @@ class ProjetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $online = $request->online ? true : false;
+
+        $rules = [
+            'name'     => 'required',
+            'duree'    => 'required',
+        ];
+
+        if ($request->image) {
+            $rules['image'] = 'required|mimes:png,jpg,jpeg,PNG,JPG,JPEG,jfif|max:4000';
+            $filename = time() . '.' . $request->image->extension();
+            $path = $request->image->storeAs('img/projects', $filename, 'public');
+        }
+
+        $request->validate($rules);
+
+        Projet::create([
+            'duree'   => $request->duree,
+            'name'            => strtolower($request->name),
+            'image'           => $path ?? null,
+            'description'     => $request->description ?? null,
+            'online'          => $online,
+        ]);
+
+        return to_route('project.index')->with("message", 'Votre projet a été ajouté avec succès !');
     }
 
     /**
@@ -46,7 +74,8 @@ class ProjetController extends Controller
      */
     public function show(Projet $projet)
     {
-        //
+        $project = $projet;
+        return view('admin.project.show',compact('project'));
     }
 
     /**
@@ -69,7 +98,34 @@ class ProjetController extends Controller
      */
     public function update(Request $request, Projet $projet)
     {
-        //
+        $project = $projet;
+
+        $online = $request->online ? true : false;
+
+        $rules = [
+            'duree'       => 'required',
+            'name'         => 'required',
+        ];
+
+        if ($request->image) {
+            $rules['image'] = 'required|mimes:png,jpg,jpeg,PNG,JPG,JPEG,jfif|max:4000';
+            $filename = time() . '.' . $request->image->extension();
+            $path = $request->image->storeAs('img/products', $filename, 'public');
+        }else {
+            $path = $project->image;
+        }
+
+        $request->validate($rules);
+
+        $project->update([
+            'duree'   => $request->duree,
+            'name'            => strtolower($request->name),
+            'image'           => $path ?? null,
+            'description'     => $request->description ?? null,
+            'online'          => $online,
+        ]);
+
+        return to_route('project.index')->with("message", 'Votre projet a été mis à avec succès !');   
     }
 
     /**
@@ -80,6 +136,8 @@ class ProjetController extends Controller
      */
     public function destroy(Projet $projet)
     {
-        //
+        $projet->delete();
+
+        return to_route('project.index');
     }
 }

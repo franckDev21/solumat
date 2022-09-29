@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('projets', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('image');
-            $table->text('description');
+            $table->string('image')->nullable();
+            $table->text('description')->nullable();
+            $table->string('duree')->nullable();
             $table->boolean('online')->default(false);
             $table->timestamps();
         });

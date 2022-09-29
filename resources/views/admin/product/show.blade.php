@@ -55,7 +55,7 @@
           </div>
           
           <div class="my-3">
-            <x-primary-button>Enregistrer le produit</x-primary-button>
+            <x-primary-button>Mettre a jour le produit</x-primary-button>
           </div>
         </div> 
     </form>
