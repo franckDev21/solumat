@@ -29,7 +29,7 @@
           <span>Douala Akwa , face de socalur</span>
         </a>
         <a href="#" class=""><i class="fa-solid fa-envelope text-secondary mr-2"></i> solumatgn@gmail.com</a>
-        <a href="#" class=""><i class="fa-solid fa-phone text-secondary mr-2 "></i> (+237) 233 428 145/ 673 535 357 / 691 799 141</a>
+        <a href="#" class=""><i class="fa-solid fa-phone text-secondary mr-2 "></i> (+237) 233 42 73 40/ 673 535 357 / 691 799 141</a>
         <span class="font-bold">Heures d’ouverture:</span>
         <a href="#" class=""><i class="fa-solid fa-clock text-secondary mr-2"></i> Lundi - Samedi : 8:00 am - 18:20 am</a>
       </div>

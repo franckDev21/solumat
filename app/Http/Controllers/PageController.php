@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\CommandeMail;
 use App\Mail\ContactMail;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
     public function index(){
-        return view('home');
+        $products = Product::latest()->take(3)->get();
+        return view('home', compact('products'));
     }
 
     public function services(){
@@ -21,7 +24,8 @@ class PageController extends Controller
     }
 
     public function boutiques(){
-        return view('boutiques');
+        $products = Product::latest()->paginate(12);
+        return view('boutiques',compact('products'));
     }
 
     public function contact(){
@@ -67,6 +71,38 @@ class PageController extends Controller
             ->send(new ContactMail($data,'devis'));
         
         return back()->with('message',"Votre devis a bien été envoyer");
+    }
+
+    public function commander(Product $product){
+        return view('commande.index',compact('product'));
+    }
+
+    public function commanderStore(Request $request){
+
+        $request->validate([
+            'firstname' => 'required',
+            'lastname'  => 'required',
+            'email'     => 'required|email',
+            'tel'   => 'required',
+        ]);
+
+        $data = $request->except('_token');
+
+        if(!$request->product){
+            return back();
+        }
+
+        $product = Product::findOrFail($request->product);
+
+        $data = array_merge($data,[
+            'product' => $product
+        ]);
+
+        Mail::to('tiomelafranck724@gmail.com')
+            ->send(new CommandeMail((object)$data));
+
+        return back()->with('message',"Votre commande a bien été enregistrer");
+
     }
     
 }

@@ -20,7 +20,7 @@
 
     <x-prestations-service  />
 
-    <x-products />
+    <x-products :products="$products" />
 
     <x-devis />
 

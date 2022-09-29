@@ -1,6 +1,6 @@
 <x-app-layout>
   <x-hero title="Boutique" />
 
-  <x-products />
+  <x-products :products="$products" />
   
 </x-app-layout>
