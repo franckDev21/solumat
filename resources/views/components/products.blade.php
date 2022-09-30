@@ -12,8 +12,9 @@
       <div class="grid grid-cols-3 gap-6">
         @foreach ($products as $product)
             <div class="bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
-                <a href="#">
-                    <img class="rounded-t-lg p-8" src="{{ asset('img/debit-Ajm.jpg') }}" alt="product image">
+                <a href="#" class="flex justify-center items-center text-center">
+                    <img id="image" class="rounded-t-lg p-8 h-[300px]" src="{{ $product->image ? asset("storage/$product->image"):asset('static/img/product.png') }}" alt="product">
+                    {{-- <img class="rounded-t-lg p-8" src="{{ asset('img/debit-Ajm.jpg') }}" alt="product image"> --}}
                 </a>
                     <div class="px-5 pb-5">
                         <a href="#">
@@ -61,11 +62,9 @@
             </div>
         @endforeach
       </div>
-      @isset($products->links)
       <div class="mt-4">
         {{ $products->links() }}
       </div>
-      @endisset
       
   </div>
 </div>

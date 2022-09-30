@@ -5,13 +5,18 @@ namespace App\Http\Controllers;
 use App\Mail\CommandeMail;
 use App\Mail\ContactMail;
 use App\Models\Product;
+use App\Models\Projet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
     public function index(){
-        $products = Product::latest()->take(3)->get();
+        // $products = Product::latest()->take(3)->get();
+        $products = Product::orderBy('updated_at', 'DESC')
+            ->orderBy('created_at', 'DESC')
+            ->filter(request(['search']))
+            ->paginate(3);
         return view('home', compact('products'));
     }
 
@@ -20,11 +25,18 @@ class PageController extends Controller
     }
 
     public function realisations(){
-        return view('realisations');
+        $projects = Projet::orderBy('updated_at', 'DESC')
+        ->orderBy('created_at', 'DESC')
+        ->filter(request(['search']))
+        ->paginate(6);
+        return view('realisations',compact('projects'));
     }
 
     public function boutiques(){
-        $products = Product::latest()->paginate(12);
+        $products = Product::orderBy('updated_at', 'DESC')
+            ->orderBy('created_at', 'DESC')
+            ->filter(request(['search']))
+            ->paginate(6);
         return view('boutiques',compact('products'));
     }
 
