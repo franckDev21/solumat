@@ -70,7 +70,8 @@ return [
     */
 
     'links' => [
-        public_path('storage') => storage_path('app/public'),
+        // public_path('storage') => storage_path('app/public'),
+        dirname(__DIR__,2).DIRECTORY_SEPARATOR.'public_html' => storage_path('app/public'),
     ],
 
 ];
