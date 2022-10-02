@@ -11,6 +11,9 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
+        {{-- <link rel="stylesheet" href="{{ asset('build/assets/app.d395deda.css') }}">
+        <script defer src="{{ asset('build/assets/app.bf8e0bf1.js') }}"></script> --}}
+        
         <!-- Styles -->
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
         

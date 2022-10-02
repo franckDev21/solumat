@@ -32,7 +32,7 @@
       <h1 class="text-center text-2xl mb-8 font-bold text-primary pb-4 border-b">VOTRE COMMANDE</h1>
       <div class="flex items-start justify-between ">
         <div class="w-[300px] h-[300px] flex-none overflow-hidden relative">
-          <img class=" rounded-md w-[300px] h-auto hover:scale-105 transition" src="{{ asset('img/debit-Ajm.jpg') }}" alt="">
+          <img class=" rounded-md w-[300px] h-auto hover:scale-105 transition" src="{{ $product->image ? asset("storage/$product->image"):asset('static/img/product.png') }}" alt="">
         </div>
         <div class="p-3">
           <h1 class="text-4xl font-bold text-gray-700 mb-4 -mt-4">{{ $product->name }}</h1>
