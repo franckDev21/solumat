@@ -1,6 +1,6 @@
-<footer class="mt-auto bg-white bg-right shadow-md" >
-  <div class="container grid grid-cols-4 gap-8 pb-16 pt-24">
-    <div>
+<footer class="mt-auto bg-white bg-right " >
+  <div class="container grid xl:grid-cols-4 gap-8 pb-16 pt-[50px] md:pt-24">
+    <div> 
       <x-logo/>
       <p class="mt-5 text-opacity-80">
         <span class="text-base font-bold">SOLUMAT SARL</span> 

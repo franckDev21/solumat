@@ -1,6 +1,6 @@
 @props(['product'])
 
-<div>
+<div {{ $attributes->merge(['class' => 'block']) }}>
   @if(session()->has('message'))
   <div class="container px-10 mb-24 mt-10">
     <div id="alert-border-3" class="flex p-4 mb-4 bg-green-100 border-t-4 border-green-500 dark:bg-green-200" role="alert">

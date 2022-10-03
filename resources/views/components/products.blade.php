@@ -1,6 +1,6 @@
 @props(['products'])
 
-<div class="my-10">
+<div {{ $attributes->merge(['class' => 'my-10']) }}>
   <h1 class="text-secondary font-bold text-center flex items-center justify-center">
      <span class="h-1 w-5 bg-primary inline-block mr-3"></span>Produits
   </h1>

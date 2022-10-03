@@ -1,4 +1,4 @@
-<div class="bg-white p-10 relative h-[500px]">
+<div {{ $attributes->merge(['class' => 'bg-white p-10 relative h-[500px]']) }}>
   <div class="bg-white absolute top-2 w-[500px] shadow-md right-0 z-50 p-10 flex flex-col">
       <h1 class="bg-primary p-4 text-white text-xl mb-2 font-bold"><i class="fa-solid fa-paper-plane  mr-3"></i> Emplacement du bureau </h1>
       <h3>Nous sommes situés en face de socalu</h3>

@@ -59,25 +59,36 @@
 
 .banner{
   // @apply bg-gradient-to-l from-primary to-secondary;
-  .item::after{
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    position: absolute;
-    z-index: 20;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background-image:linear-gradient(to right, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.242));
+  .item{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    pointer-events: none;
-    clip-path: polygon(100% 0, 100% 87%, 59% 99%, 0 90%, 0 0);
+    &::after{
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      position: absolute;
+      z-index: 20;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background-image:linear-gradient(to right, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.242));
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      clip-path: polygon(100% 0, 100% 87%, 59% 99%, 0 90%, 0 0);
+    }
   }
+  
   clip-path: polygon(100% 0, 100% 87%, 59% 99%, 0 90%, 0 0);
+
+  @media (max-width: 900px) {
+    clip-path: polygon(100% 0, 100% 87%, 59% 95%, 0 90%, 0 0);
+  }
+
   img{
     z-index: 1 !important;
   }
@@ -103,6 +114,9 @@
 
 footer{
   clip-path: polygon(28% 0, 100% 8%, 100% 100%, 0 100%, 0 10%);
+  @media (max-width: 900px) {
+    clip-path: polygon(13% 0, 200% 8%, 100% 100%, 0 100%, 0 2%);
+  }
 }
 
 
@@ -120,4 +134,18 @@ div.devis{
     background-size: cover;
     background-repeat: no-repeat;
     pointer-events: none;
+}
+
+
+// responsive header
+.menu{
+  transition: transform .25s ease-in-out;
+  transform: translateX(-100%);
+  z-index: 1000;
+  #croix{
+    z-index: 1200;
+  }
+}
+#burger:checked ~ .menu{
+  transform: translateY(0);
 }

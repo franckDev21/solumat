@@ -12,6 +12,47 @@
   </div>
 </div>
 
+<!-- mobile -->  
+<header class="bg-white shadow block lg:hidden">
+  <div class="container py-3 flex justify-between items-center">
+    <a href="/" class="logo">
+      <x-logo />
+    </a>
+
+    <input type="checkbox" class="hidden" hidden id="burger">
+
+    <div class="menu cursor-pointer fixed h-full w-full pt-16 bg-gray-700 text-white shadow-md top-0 bottom-0 left-0">
+      <label id="croix" for="burger" class="absolute opacity-80 top-4 right-4 w-8 h-8 ">
+        <span class="h-1 top-3 absolute rotate-[45deg] w-full inline-block bg-white rounded-md"></span>
+        <span class="h-1 top-3 absolute rotate-[-45deg] w-full inline-block bg-white rounded-md"></span>
+      </label>
+      
+      <div class="bg-white p-2"> 
+        <a href="/" class="logo">
+          <x-logo />
+        </a>
+      </div>
+
+      <span class="h-1 mt-2 w-full bg-gray-100 inline-block"></span>
+
+      <div> 
+        <a class="py-2 px-2 inline-block w-full text-2xl {{ request()->routeIs('home') ? 'text-primary':'' }}" href="{{ route('home') }}">Accueil</a>
+        <a class="py-2 px-2 inline-block w-full text-2xl {{ request()->routeIs('services') ? 'text-primary':'' }}" href="{{ route('services') }}">Services</a>
+        <a class="py-2 px-2 inline-block w-full text-2xl {{ request()->routeIs('boutiques') ? 'text-primary':'' }}" href="{{ route('boutiques') }}">Boutiques</a>
+        <a class="py-2 px-2 inline-block w-full text-2xl {{ request()->routeIs('realisations') ? 'text-primary':'' }}" href="{{ route('realisations') }}">Quelques Réalisations</a>
+        <a class="py-2 px-2 inline-block w-full text-2xl {{ request()->routeIs('contact') ? 'text-primary':'' }}" href="{{ route('contact') }}">Contact</a>
+      </div>
+
+    </div>  
+
+    <label for="burger" class="w-8 h-8 cursor-pointer flex flex-col space-y-1 justify-center items-center">
+      <span class="h-1.5 w-full inline-block bg-secondary rounded-md"></span>
+      <span class="h-1.5 w-full inline-block bg-secondary rounded-md"></span>
+      <span class="h-1.5 w-full inline-block bg-secondary rounded-md"></span>
+    </label>
+  </div>
+</header>
+<!-- mobile -->
 
 <!-- Desktop header -->
 <header class="bg-white shadow hidden lg:block">
@@ -50,3 +91,4 @@
   </div>
 </header>
 <!-- End Desktop header -->
+

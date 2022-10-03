@@ -1,4 +1,4 @@
-<div class="devis mb-5">
+<div {{ $attributes->merge(['class' => 'devis mb-5']) }}>
   <div class="container py-24 text-white">
       <h1 class="text-5xl font-bold">Besoin d'un <span class="text-primary"> Devis Gratuit ?</span></h1>
       <p class="w-1/3 my-5">
