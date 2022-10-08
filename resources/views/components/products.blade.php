@@ -8,8 +8,8 @@
   <p class="text-center mb-4">
       Nous vous offrons une variété de produit d'entretien et de construction pour vos piscines à bas prix
   </p>
-  <div class="container px-10 text-center">
-      <div class="grid grid-cols-3 gap-6">
+  <div class="container md:px-5 xl:px-10 text-center">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         @foreach ($products as $product)
             <div class="bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
                 <a href="#" class="flex justify-center items-center text-center">
@@ -53,10 +53,10 @@
                             </svg>
                             <span class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">5.0</span>
                         </div>
-                        <div class="flex items-center justify-between">
-                            <span class="text-3xl font-bold text-gray-900 dark:text-white">{{ number_format($product->price, 0, ',', '.') }}FCFA</span>
+                        <div class="flex items-center justify-between flex-wrap">
+                            <span class="text-3xl font-bold text-gray-900 dark:text-white opacity-60 line-through">{{ number_format($product->price, 0, ',', '.') }}FCFA</span>
                             <a href="{{ route('commander.index',$product) }}"
-                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Commander</a>
+                                class="text-white block w-full mt-3 md:mt-0 md:w-auto md:inline-block bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Commander</a>
                         </div>
                     </div>
             </div>

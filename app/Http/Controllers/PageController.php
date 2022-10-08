@@ -73,7 +73,7 @@ class PageController extends Controller
             'service'   => 'required'
         ]);
 
-        if(!in_array($request->service,['Création & Entretien des piscines','Vente des produits d\'entretien','Plomberie','Réalisation des forages & traitement des eaux','Peinture bâtiment','Vidange des fosses'])){
+        if(!in_array($request->service,['Création des piscines','Entretien des piscines','Vente des produits d\'entretien','Plomberie','Réalisation des forages & traitement des eaux','Peinture bâtiment','Vidange des fosses'])){
             return back();
         }
 

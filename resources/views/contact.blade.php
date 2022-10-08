@@ -2,10 +2,10 @@
   <x-hero title="Contactez nous " />
 
   <div class="bg-white py-24">
-    <div class="container px-10 flex justify-between items-start">
-      <div class="flex flex-col w-1/2">
+    <div class="container xl:px-10 flex flex-col lg:flex-row justify-between items-start">
+      <div class="flex flex-col w-full xl:w-1/2">
         <h2 class="my-2 font-bold text-secondary">Contact</h2>
-        <div class="text-6xl font-bold mt-3 mb-10 flex justify-start items-start">
+        <div class="text-1xl xl:text-6xl font-bold mt-3 mb-10 flex justify-start items-start">
           <div class="grid grid-cols-3 justify-center gap-2 w-24 mr-4 translate-y-4">
             <span class="w-2 h-2 inline-block bg-black"></span>
             <span class="w-2 h-2 inline-block bg-secondary"></span>
@@ -17,10 +17,10 @@
             <span class="w-2 h-2 inline-block"></span>
             <span class="w-2 h-2 inline-block bg-secondary"></span>
           </div>
-          <div>Vous avez une Péoccupation ? Parlez nous-en</div>
+          <div class="w-full md:w-auto">Vous avez une Péoccupation ? Parlez nous-en</div>
         </div>
 
-        <div class="w-[500px] h-[400px] relative">
+        <div class="hidden lg:block w-[500px] h-[400px] relative">
           <img src="{{ asset('img/p1.jpg') }}" class="absolute top-0 h-[70%] w-[90%]" alt="">
           <img src="{{ asset('img/p2.jpg') }}" class="absolute bottom-0 right-0 h-[70%] w-[90%]" alt="">
         </div>
@@ -36,16 +36,16 @@
         </div>
 
       @else
-        <form action="{{ route('contact.send') }}" class="w-1/2" method="POST">
+        <form action="{{ route('contact.send') }}" class="w-full lg:w-1/2" method="POST">
           @csrf
-          <p class="my-4 w-[90%] text-lg mb-10">Nous sommes heureux de discuter de la situation de votre organisation. Veuillez donc nous contacter via les coordonnées ci-dessous, ou entrez votre demande. </p>
-          <div class="flex space-x-5 mb-8 mt-24">
-            <input name="firstname" required type="text" placeholder="Prénoms *" class="px-4 py-4 rounded-md w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
-            <input name="lastname" required type="text" placeholder="Noms *" class="px-4 py-4 rounded-md w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
+          <p class="my-4 w-full xl:w-[90%] text-lg mb-10 block">Nous sommes heureux de discuter de la situation de votre organisation. Veuillez donc nous contacter via les coordonnées ci-dessous, ou entrez votre demande. </p>
+          <div class="flex xl:space-x-5 mb-4 xl:mb-8 mt-24 flex-wrap">
+            <input name="firstname" required type="text" placeholder="Prénom *" class="px-4 py-4 rounded-md w-full xl:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
+            <input name="lastname" required type="text" placeholder="Nom *" class="px-4 py-4 mt-4 xl:mt-0 rounded-md w-full xl:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
           </div>
-          <div class="flex space-x-5 mb-8">
-            <input name="email" type="email" required placeholder="Votre Email *" class="px-4 py-4 rounded-md w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
-            <input name="tel" type="tel" required placeholder="Téléphone *" class="px-4 py-4 rounded-md w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
+          <div class="flex xl:space-x-5 mb-8 flex-wrap">
+            <input name="email" type="email" required placeholder="Votre Email *" class="px-4 py-4 rounded-md w-full xl:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
+            <input name="tel" type="tel" required placeholder="Téléphone *" class="px-4 py-4 mt-4 xl:mt-0 rounded-md w-full xl:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
           </div>
           <textarea name="message" required placeholder="Votre message ici ..." class="px-4 py-4 rounded-md w-full bg-gray-200 outline-none ring-0 border-0 focus:ring-0" id="" cols="30" rows="6"></textarea>
           <button type="submit" class="px-5 py-4 bg-secondary w-full inline-block font-bold mt-5 text-white text-center rounded-md">Envoyez votre message</button>

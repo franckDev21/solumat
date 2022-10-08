@@ -2,13 +2,13 @@
   <!-- Carousel wrapper -->
 
 
-  <div class="relative h-[400px] md:h-[500px] overflow-hidden ">
+  <div class="relative h-[440px] md:h-[500px] overflow-hidden ">
     <!-- Item 1 -->
     <div style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.242)),url('{{ asset('img/p1.jpg') }}');" class=" duration-700 item ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="active">
-        <div class="content text-white container pt-5 xl:pt-20">
+        <div class="content text-white container pt-3 xl:pt-20">
           <h1 class="h-[4px] w-16 bg-secondary rounded-md"></h1>
-          <h2 class="text-white text-3xl md:text-5xl xl:text-6xl relative font-bold ">Création & <br>  Entretien des piscines</h2>
-          <p class="py-4 xl:py-6 w-full xl:w-1/2 text-gray-100">
+          <h2 class="text-white text-2xl md:text-5xl xl:text-6xl relative font-bold ">Création & <br>  Entretien des piscines</h2>
+          <p class="py-3 xl:py-4 w-full xl:w-1/2 text-gray-100 text-sm md:text-base">
             <span class="text-secondary">SOLUMAT sarl</span> est une entreprise de Services Professionnels avec une Expertise Avérée dans divers secteurs d’activité, notament en Création et entretien des piscines, Vente des produits d'entretien, Plomberie , Réalisation des forages, traitement des eaux, peintures bâtiment et vidange des fosses.
           </p>
           <div>
@@ -23,8 +23,8 @@
     <div style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.242)),url('{{ asset('img/b1.jpg') }}');" class=" duration-700 item ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="">
       <div class="content text-white container pt-5 xl:pt-20">
         <h1 class="h-[4px] w-16 bg-secondary rounded-md"></h1>
-        <h2 class="text-white text-3xl md:text-5xl xl:text-6xl relative font-bold "> Vente des produits <br> d'entretien</h2>
-        <p class="py-6 w-full xl:w-1/2 text-gray-100">
+        <h2 class="text-white text-2xl md:text-5xl xl:text-6xl relative font-bold "> Vente des produits <br> d'entretien</h2>
+        <p class="py-4 w-full xl:w-1/2 text-gray-100">
           <span class="text-secondary">SOLUMAT sarl</span> est une entreprise de Services Professionnels avec une Expertise Avérée dans divers secteurs d’activité, notament en Création et entretien des piscines, Vente des produits d'entretien, Plomberie , Réalisation des forages, traitement des eaux, peintures bâtiment et vidange des fosses.
         </p>
         <div>
@@ -39,8 +39,8 @@
     <div style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.242)),url('{{ asset('img/b2.jpg') }}');" class=" duration-700 item ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
       <div class="content text-white container pt-5 xl:pt-20">
         <h1 class="h-[4px] w-16 bg-secondary rounded-md"></h1>
-        <h2 class="text-white text-3xl md:text-5xl xl:text-6xl relative font-bold ">Plomberie</h2>
-        <p class="py-6 w-full xl:w-1/2 text-gray-100">
+        <h2 class="text-white text-2xl md:text-5xl xl:text-6xl relative font-bold ">Plomberie</h2>
+        <p class="py-4 w-full xl:w-1/2 text-gray-100">
           <span class="text-secondary">SOLUMAT sarl</span> est une entreprise de Services Professionnels avec une Expertise Avérée dans divers secteurs d’activité, notament en Création et entretien des piscines, Vente des produits d'entretien, Plomberie , Réalisation des forages, traitement des eaux, peintures bâtiment et vidange des fosses.
         </p>
         <div>
@@ -55,8 +55,8 @@
     <div style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.242)),url('{{ asset('img/b3.jpg') }}');" class=" duration-700 item ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
       <div class="content text-white container pt-5 xl:pt-20">
         <h1 class="h-[4px] w-16 bg-secondary rounded-md"></h1>
-        <h2 class="text-white text-3xl md:text-5xl xl:text-6xl relative font-bold ">Réalisation des forages <br> & traitement des eaux</h2>
-        <p class="py-6 w-full xl:w-1/2 text-gray-100">
+        <h2 class="text-white text-2xl md:text-5xl xl:text-6xl relative font-bold ">Forages <br> & traitement des eaux</h2>
+        <p class="py-4 w-full xl:w-1/2 text-gray-100">
           <span class="text-secondary">SOLUMAT sarl</span> est une entreprise de Services Professionnels avec une Expertise Avérée dans divers secteurs d’activité, notament en Création et entretien des piscines, Vente des produits d'entretien, Plomberie , Réalisation des forages, traitement des eaux, peintures bâtiment et vidange des fosses.
         </p>
         <div>
@@ -71,8 +71,8 @@
     <div style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.242)),url('{{ asset('img/b4.jpeg') }}')" class= "duration-700 item ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
       <div class="content text-white container pt-5 md:pt-16 xl:pt-20">
         <h1 class="h-[4px] w-16 bg-secondary rounded-md"></h1>
-        <h2 class="text-white text-3xl md:text-5xl xl:text-6xl relative font-bold ">Peinture bâtiment</h2>
-        <p class="py-6 w-full xl:w-1/2 text-gray-100">
+        <h2 class="text-white text-2xl md:text-5xl xl:text-6xl relative font-bold ">Peinture bâtiment</h2>
+        <p class="py-4 w-full xl:w-1/2 text-gray-100">
           <span class="text-secondary">SOLUMAT sarl</span> est une entreprise de Services Professionnels avec une Expertise Avérée dans divers secteurs d’activité, notament en Création et entretien des piscines, Vente des produits d'entretien, Plomberie , Réalisation des forages, traitement des eaux, peintures bâtiment et vidange des fosses.
         </p>
         <div>
@@ -87,8 +87,8 @@
     <div style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.242)),url('{{ asset('img/v1.jpg') }}');" class=" duration-700 item ease-in-out absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
       <div class="content text-white container pt-5 xl:pt-20">
         <h1 class="h-[4px] w-16 bg-secondary rounded-md"></h1>
-        <h2 class="text-white text-3xl md:text-5xl xl:text-6xl relative font-bold ">Vidange des fosses</h2>
-        <p class="py-6 w-full xl:w-1/2 text-gray-100">
+        <h2 class="text-white text-2xl md:text-5xl xl:text-6xl relative font-bold ">Vidange des fosses</h2>
+        <p class="py-4 w-full xl:w-1/2 text-gray-100">
           <span class="text-secondary">SOLUMAT sarl</span> est une entreprise de Services Professionnels avec une Expertise Avérée dans divers secteurs d’activité, notament en Création et entretien des piscines, Vente des produits d'entretien, Plomberie , Réalisation des forages, traitement des eaux, peintures bâtiment et vidange des fosses.
         </p>
         <div>

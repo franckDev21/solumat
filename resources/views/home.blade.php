@@ -10,8 +10,8 @@
                     SOLUMAT SARL est une entreprise de Services Professionnels avec une Expertise Avérée dans divers secteurs d’activité, notament en  Conseil & Gestion, Nettoyage et Services, Services à la Personne.
                 </p>
                 <div class="flex w-full">
-                    <button class="px-2 py-2 xl:px-4 xl:py-3  xl:text-base bg-secondary bg-opacity-80 md:uppercase font-bold border-4 border-secondary text-white"><span class=" hidden md:inline-block">Nos</span>réalisations <i class="fa-solid fa-globe ml-1 xl:ml-4"></i></button>
-                    <button class="px-2 py-2.5 xl:px-4 xl:py-3  xl:text-base bg-secondary bg-opacity-20 md:uppercase font-bold border-4 text-secondary">Demander un devis <i class="fa-regular fa-file-lines ml-1 xl:ml-4"></i></button>
+                    <button class="px-1 text-xs shadow-md mr-1 w-1/2 inline-block py-1 xl:px-4 xl:py-3  xl:text-base bg-secondary bg-opacity-80 md:uppercase font-bold border-4 border-secondary text-white"><span class=" hidden md:inline-block">Nos</span>réalisations <i class="fa-solid fa-globe ml-1 xl:ml-4"></i></button>
+                    <button class="px-1 text-xs shadow-md ml-1 w-1/2 inline-block py-1 xl:px-4 xl:py-3  xl:text-base bg-secondary bg-opacity-20 md:uppercase font-bold border-4 text-secondary">Demander <span class=" hidden md:inline-block">un</span><span class="md:hidden inline-block">le</span> devis <i class="fa-regular fa-file-lines ml-1 xl:ml-4"></i></button>
                 </div>
             </div>
             <img class="hidden lg:inline-block w-[400px] rounded-md" src="{{ asset('img/i2.jpg') }}" alt="">
