@@ -1,8 +1,8 @@
-<div id="indicators-carousel" class="relative h-500px]  banner" data-carousel="slide" data-carousel-interval="5000">
+<div id="indicators-carousel" style="height: 500px" class="relative h-500px  banner" data-carousel="slide" data-carousel-interval="5000">
   <!-- Carousel wrapper -->
 
 
-  <div class="relative h-[440px] md:h-[500px] overflow-hidden ">
+  <div class="relative block h-[440px] md:h-[500px] overflow-hidden ">
     <!-- Item 1 -->
     <div style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.242)),url('{{ asset('img/p1.jpg') }}');" class=" duration-700 item ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="active">
         <div class="content text-white container pt-3 xl:pt-20">

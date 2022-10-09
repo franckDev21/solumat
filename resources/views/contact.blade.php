@@ -39,11 +39,11 @@
         <form action="{{ route('contact.send') }}" class="w-full lg:w-1/2" method="POST">
           @csrf
           <p class="my-4 w-full xl:w-[90%] text-lg mb-10 block">Nous sommes heureux de discuter de la situation de votre organisation. Veuillez donc nous contacter via les coordonnées ci-dessous, ou entrez votre demande. </p>
-          <div class="flex xl:space-x-5 mb-4 xl:mb-8 mt-24 flex-wrap">
+          <div class="flex xl:space-x-5 mb-4 xl:mb-8 mt-5 md:mt-24 flex-col md:flex-row">
             <input name="firstname" required type="text" placeholder="Prénom *" class="px-4 py-4 rounded-md w-full xl:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
             <input name="lastname" required type="text" placeholder="Nom *" class="px-4 py-4 mt-4 xl:mt-0 rounded-md w-full xl:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
           </div>
-          <div class="flex xl:space-x-5 mb-8 flex-wrap">
+          <div class="flex xl:space-x-5 mb-8 flex-col md:flex-row">
             <input name="email" type="email" required placeholder="Votre Email *" class="px-4 py-4 rounded-md w-full xl:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
             <input name="tel" type="tel" required placeholder="Téléphone *" class="px-4 py-4 mt-4 xl:mt-0 rounded-md w-full xl:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
           </div>

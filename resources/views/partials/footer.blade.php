@@ -11,27 +11,27 @@
     <div>
       <h2 class="text-2xl font-bold mb-5">Liens utiles</h2>
       <div class="flex flex-col space-y-3">
-        <a href="#" class="text-secondary hover:text-primary transition">Accueil</a>
+        <a href="{{ route('home') }}" class="text-secondary hover:text-primary transition">Accueil</a>
         {{-- <a href="#" class="text-secondary hover:text-primary transition">A Propos</a> --}}
-        <a href="#" class="text-secondary hover:text-primary transition">Services</a>
-        <a href="#" class="text-secondary hover:text-primary transition">Nos Réalisations</a>
-        <a href="#" class="text-secondary hover:text-primary transition">Boutique</a>
-        <a href="#" class="text-secondary hover:text-primary transition">Obtenir un devis</a>
-        <a href="#" class="text-secondary hover:text-primary transition">Contact</a>
+        <a href="{{ route('services') }}" class="text-secondary hover:text-primary transition">Services</a>
+        <a href="{{ route('realisations') }}" class="text-secondary hover:text-primary transition">Nos Réalisations</a>
+        <a href="{{ route('boutiques') }}" class="text-secondary hover:text-primary transition">Boutique</a>
+        <a href="{{ route('devis') }}" class="text-secondary hover:text-primary transition">Obtenir un devis</a>
+        <a href="{{ route('contact') }}" class="text-secondary hover:text-primary transition">Contact</a>
       </div>
     </div>
 
     <div>
       <h2 class="text-2xl font-bold mb-5">Adresse et Contact</h2>
       <div class="flex flex-col space-y-5">
-        <a href="#" class="">
+        <a  class="">
           <i class="fa-solid fa-location-dot text-secondary mr-2"></i>
           <span>Douala Akwa , face de socalur</span>
         </a>
-        <a href="#" class=""><i class="fa-solid fa-envelope text-secondary mr-2"></i> solumatgn@gmail.com</a>
-        <a href="#" class=""><i class="fa-solid fa-phone text-secondary mr-2 "></i> (+237) 233 42 73 40/ 673 535 357 / 691 799 141</a>
+        <a href="mailto:www.solumatgn@gmail.com" class=""><i class="fa-solid fa-envelope text-secondary mr-2"></i> solumatgn@gmail.com</a>
+        <a  class=""><i class="fa-solid fa-phone text-secondary mr-2 "></i> (+237) 233 42 73 40 / 673 53 57 40 / 691 799 141</a>
         <span class="font-bold">Heures d’ouverture:</span>
-        <a href="#" class=""><i class="fa-solid fa-clock text-secondary mr-2"></i> Lundi - Samedi : 8:00 am - 18:20 am</a>
+        <a  class=""><i class="fa-solid fa-clock text-secondary mr-2"></i> Lundi : 8:00 - 18:30 <br> Samedi : 8:00 am - 14:30 am</a>
       </div>
     </div>
 

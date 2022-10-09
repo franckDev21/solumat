@@ -35,12 +35,13 @@
 
       <span class="h-1 mt-2 w-full bg-gray-100 inline-block"></span>
 
-      <div> 
+      <div class="w-full"> 
         <a class="py-2 px-2 inline-block w-full text-2xl {{ request()->routeIs('home') ? 'text-primary':'' }}" href="{{ route('home') }}">Accueil</a>
         <a class="py-2 px-2 inline-block w-full text-2xl {{ request()->routeIs('services') ? 'text-primary':'' }}" href="{{ route('services') }}">Services</a>
         <a class="py-2 px-2 inline-block w-full text-2xl {{ request()->routeIs('boutiques') ? 'text-primary':'' }}" href="{{ route('boutiques') }}">Boutiques</a>
         <a class="py-2 px-2 inline-block w-full text-2xl {{ request()->routeIs('realisations') ? 'text-primary':'' }}" href="{{ route('realisations') }}">Quelques Réalisations</a>
         <a class="py-2 px-2 inline-block w-full text-2xl {{ request()->routeIs('contact') ? 'text-primary':'' }}" href="{{ route('contact') }}">Contact</a>
+        <a href="{{ route('devis') }}" class="bg-secondary px-4 py-2 text-white rounded-md mt-2 ml-2 uppercase text-center  inline-block w-[90%] mx-auto transition">Obtenir un devis</a>
       </div>
 
     </div>  
@@ -73,6 +74,9 @@
         <a href="{{ route('devis') }}" class=" nav-btn bg-opacity-80 bg-secondary text-sm text-white font-semibold"><span>Demander un devis</span> <i class="fa-solid ml-2 fa-arrow-right-long devis"></i></a>
         
         @auth
+        <x-dropdown-link :href="route('product.index')" class="nav-btn border-2 font-semibold text-sm ">
+            {{ __('Dashboard') }}
+        </x-dropdown-link>
         <form method="POST" class="inline-block" action="{{ route('logout') }}">
             @csrf
 

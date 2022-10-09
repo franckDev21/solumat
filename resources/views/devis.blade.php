@@ -22,11 +22,11 @@
       </p>
       <form action="{{ route('devis.send') }}" class="w-full" method="POST">
         @csrf
-        <div class="flex xl:space-x-5 mb-4 xl:mb-8 mt-10 flex-wrap">
+        <div class="flex md:space-x-5 mb-4 md:mb-8 mt-10 md:flex-row flex-col ">
           <input name="firstname" required type="text" placeholder="Prénom *" class="px-4  py-4 rounded-md w-full md:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
           <input name="lastname" required type="text" placeholder="Nom *" class="px-4 mt-4 md:mt-0 py-4 m-0 rounded-md w-full md:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
         </div>
-        <div class="flex xl:space-x-5 mb-8 flex-wrap">
+        <div class="flex md:space-x-5 mb-4 md:mb-8 mt-10 md:flex-row flex-col">
           <input name="email" type="email" required placeholder="Votre Email *" class="px-4 py-4 rounded-md w-full md:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
           <input name="tel" type="tel" required placeholder="Téléphone *" class="px-4 py-4 mt-4 md:mt-0 rounded-md w-full md:w-1/2 bg-gray-200 outline-none ring-0 border-0 focus:ring-0">
         </div>

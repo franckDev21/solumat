@@ -4,9 +4,9 @@
   <h1 class="text-secondary font-bold text-center flex items-center justify-center">
      <span class="h-1 w-5 bg-primary inline-block mr-3"></span>Produits
   </h1>
-  <h2 class="text-4xl text-center font-bold mt-5 mb-2">Nos différents produits</h2>
+  <h2 class="text-4xl text-center font-bold mt-5 mb-2">Nos différentes réalisations</h2>
   <p class="text-center mb-4">
-      Nous vous offrons une variété de produit d'entretien et de construction pour vos piscines à bas prix
+    voici une liste de quelque projets que nous avons réalisé ainsi que leurs durée respective
   </p>
   <div class="container md:px-5 xl:px-10 text-center">
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
